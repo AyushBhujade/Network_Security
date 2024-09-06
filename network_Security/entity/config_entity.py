@@ -33,7 +33,7 @@ class DataIngestionConfig:
         
         
         
-        pass
+        
     
 class DataTransformatiConfig:
     def __init__(self):
