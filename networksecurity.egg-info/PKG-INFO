@@ -9,3 +9,13 @@ Requires-Dist: pandas
 Requires-Dist: numpy
 Requires-Dist: pymongo
 Requires-Dist: certifi
+Requires-Dist: scikit-learn
+Requires-Dist: dill
+Requires-Dist: pyyaml
+Requires-Dist: xgboost
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: ipykernel
+Requires-Dist: apache-airflow
+Requires-Dist: mlflow
+Requires-Dist: dvc

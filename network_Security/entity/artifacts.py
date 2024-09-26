@@ -3,6 +3,7 @@ import os
 from network_Security.constants import training_pipeline
 from dataclasses import dataclass
 
+
 @dataclass
 class TrainingPipelineArtifact:
     def __init__(self):
@@ -23,25 +24,37 @@ class DataValidationArtifact:
     invalid_test_file_path:str
     drift_report_file_path:str
 @dataclass
-class DataTransformatiArtifact:
-    def __init__(self):
-        pass
+class DataTransformationArtifact:
+    transformed_object_file_path:str
+    transformed_train_file_path:str
+    transformed_test_file_path:str
     
-
-    
-@dataclass
-class  ModelEvaluationArtifact:
-    def __init__(self):
-        pass
     
 @dataclass
 class ModelPusherArtifact:
-    def __init__(self):
-        pass
+    saved_model_path:str
+    model_file_path:str
     
-     
+
+@dataclass
+class ClassificationMetricArtifact:
+    f1_score: float
+    precision_score: float
+    recall_score: float
+    
+    
+@dataclass
+class ModelEvaluationArtifact:
+    is_model_accepted:bool
+    improved_accuracy:float
+    best_model_path:str
+    trained_model_path:str
+    train_model_metric_artifact:ClassificationMetricArtifact
+    best_model_metric_artifact: ClassificationMetricArtifact
 @dataclass
 class ModelTrainerArtifact :
-    def __init__(self):
-        pass
+    trained_model_file_path:str
+    train_metric_artifact:ClassificationMetricArtifact
+    test_metric_artifact:ClassificationMetricArtifact
+    
  
